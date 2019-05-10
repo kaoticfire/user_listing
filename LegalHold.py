@@ -39,7 +39,7 @@ def user_listing(date_str):
     try:
         name = getfqdn(ip)
         host = name.upper()
-        domain = sub(r'CORP.AD.FMCNA.COM', '', host)
+        domain = sub(r'mydomain.com', '', host)
         tag = domain.split('-')
         service_tag = tag[1]
         call('CMD /C echo Service Tag: ' + service_tag + ' >> ' + file_name)
